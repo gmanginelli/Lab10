@@ -110,8 +110,8 @@ protected final class Tree
     }
     
     public ArrayList<Tree> getChildren()
-    {return null;
-	//TODO
+    {
+	return this.children;
     }
     
     public void add(Tree child)
