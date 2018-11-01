@@ -117,7 +117,7 @@ protected final class Tree
     
     public void add(Tree child)
     { 
-	//TODO
+	children.add(child);
     }
 }
     
