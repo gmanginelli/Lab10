@@ -170,8 +170,13 @@ public int nnaryTreeSize(int branchingFactor, int height)
      * @return The sum of the values in the subtree.
      */
 public int treeSum(Tree tree)
-{return -1;
-	//TODO
+{
+        int sum = 0;
+        for(Tree t : tree.getChildren()){
+            sum += t.getValue();
+        }
+        
+        return sum;
 }
     
     /**
