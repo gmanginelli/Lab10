@@ -105,8 +105,8 @@ protected final class Tree
     }
     
     public int getValue()
-    {return -1;
-	//TODO
+    {
+	return this.value;
     }
     
     public ArrayList<Tree> getChildren()
