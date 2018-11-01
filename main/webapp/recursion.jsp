@@ -101,7 +101,8 @@ protected final class Tree
     
     public Tree(int value)
     {
-	//TODO
+	this.value = value;
+	children = new ArrayList<Tree>();
     }
     
     public int getValue()
