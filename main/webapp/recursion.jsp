@@ -157,13 +157,14 @@
      */
     public int nnaryTreeSize(int branchingFactor, int height)
     {
-        if (height == 1)
+         int total = 0;
+        if (height == 0)
         {
-            return 1;
+            return 0;
         }
         else
         {
-            return branchingFactor * nnaryTreeSize(branchingFactor, height - 1);
+            return total += Math.pow(branchingFactor, height-1) + nnaryTreeSize(branchingFactor, height - 1);
         }
     }
 
@@ -178,16 +179,20 @@
     public int treeSum(Tree tree)
     {
         int sum = 0;
-        
-        if(tree.getChildren() == null){
-            sum += tree.getValue();
-        }
-        for (Tree t : tree.getChildren())
-        {
-            sum += treeSum(t);
-        }
 
-        return sum;
+        if (tree.getChildren() == null)
+        {
+            return sum + tree.value;
+        }
+        else
+        {
+            sum += tree.value;
+            for (Tree t : tree.getChildren())
+            {
+                sum += treeSum(t);
+            }
+            return sum;
+        }
     }
 
     /**
